@@ -1,8 +1,9 @@
 <script setup>
+
 </script>
 
 <template>
-  <router-view />
+  我是分类
 </template>
 
 <style scoped>

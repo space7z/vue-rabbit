@@ -1,8 +1,9 @@
 <script setup>
+
 </script>
 
 <template>
-  <router-view />
+  我是主页
 </template>
 
 <style scoped>
