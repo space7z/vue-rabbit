@@ -3,8 +3,14 @@
 </script>
 
 <template>
-  我是主页
+  <div class="home">
+    ws
+  </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+.home {
+  width: 100%;
+  height: 20px;
+}
 </style>
