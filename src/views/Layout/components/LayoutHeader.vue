@@ -1,15 +1,14 @@
 <script setup>
-import { getCategoryAPI } from '@/apis/layout'
 import { onMounted, ref } from 'vue';
-const categoryList = ref([])
+import { useHomeStore } from '@/stores/index.js'
+import { storeToRefs } from 'pinia'
+const homeStore = useHomeStore()
+const { categoryList } = storeToRefs(homeStore)
 
-const getCategory = async () => {
-  const res = await getCategoryAPI()
-  categoryList.value = res.result
-}
 onMounted(() => {
-  getCategory()
+  homeStore.getCategory()
 })
+
 </script>
 
 <template>
@@ -20,7 +19,7 @@ onMounted(() => {
       </h1>
       <ul class="app-header-nav">
         <li class="home" v-for="item in categoryList" :key="item.id">
-          <RouterLink to="/">{{item.name}}</RouterLink>
+          <RouterLink :to="`/category/${item.id}`">{{item.name}}</RouterLink>
         </li>
       </ul>
       <div class="search">
