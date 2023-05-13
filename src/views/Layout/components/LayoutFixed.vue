@@ -1,15 +1,11 @@
 <script setup>
 import { onMounted, ref } from 'vue';
-import { useHomeStore } from '@/stores/index.js'
+import { useCategoryStore } from '@/stores/category.js'
 import { storeToRefs } from 'pinia'
 import { useScroll } from '@vueuse/core'
 const { y } = useScroll(window)
-const homeStore = useHomeStore()
-const { categoryList } = storeToRefs(homeStore)
-
-onMounted(() => {
-  homeStore.getCategory()
-})
+const categoryStore = useCategoryStore()
+const { categoryList } = storeToRefs(categoryStore)
 
 </script>
 
