@@ -14,14 +14,8 @@ import HomePanel from './components/HomePanel.vue'
     <HomeBanner />
   </div>
   <HomeNew />
-  <import />
+  <HomeHot />
   <HomeProduct />
-  <HomePanel title="新鲜好物">
-    <div>新鲜好物</div>
-  </HomePanel>
-  <HomePanel title="人气推荐">
-    <div>人气推荐</div>
-  </HomePanel>
 </template>
 
 <style scoped lang="scss">
